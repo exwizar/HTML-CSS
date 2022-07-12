@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    border: none;
 }
 
 body{
@@ -70,6 +71,11 @@ body{
     font-size: 14px;
     line-height: 20px;
     color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.navbar-link a:hover {
+    color: yellow;
 }
 
 /* section Double click text to change it */
@@ -112,6 +118,13 @@ body{
     font-weight: 500;
     border-radius: 5px;
     text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-link:hover {
+    color: white;
+    background-color: #6B6B6B;
 }
 
 /* logotypes */
@@ -124,6 +137,10 @@ body{
     display: flex;
     justify-content: space-around;
     padding: 40px 0;
+}
+
+.block-logotypes img {
+    padding: 0 10px;
 }
 
 /* class and parents */
@@ -217,17 +234,135 @@ body{
 
 .tips-block {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
 }
 
 .tip p, .tip h3 {
     text-align: left;
-    width: 70%;
+    width: 90%;
 }
 
 .tip {
     display: flex;
-    justify-content: space-between;
-    align-items:flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 280px;
+}
+
+.tip-img {
+    margin-left: -50px;
+}
+
+/* footer */
+
+.footer-menu {
+    background-color: #6B6B6B;
+    
+}
+
+.footer-height {
+    padding: 10px 0;
+}
+
+.black-section {
+    background-color: #000;
+}
+
+.black-section p {
+    padding: 15px 0;
+    color: #777777;
+    font-size: 12px;
+}
+
+@media (max-width: 1030px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        width: 100vw;
+    }
+
+    .edit-link {
+        display: flex;
+        margin: 0 auto;
+        width: 200px;
+        text-align: center;
+    }
+
+    .block-logotypes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .double-click {
+        text-align: center;
+        width: 100%;
+    }
+
+    .double-click h1 {
+        font-size: 30px;
+    }
+
+    .double-click p {
+        font-size: 16px;
+    }
+
+    .flex-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .flex-class-perents {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 0;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-parents {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+}
+
+@media (max-width: 550px) {
+    .wrapper{
+        width: 100%;
+    }
+
+    .edit-link {
+        display: flex;
+        width: 240px;
+    }
+
+    .block-logotypes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .double-click {
+        text-align: center;
+        width: 400px;
+        min-width: 300px;
+    }
+
+    .double-click h1 {
+        font-size: 21px;
+    }
+
+    .double-click p {
+        font-size: 12px;
+    }
+
+    .w-block {
+        width: 70vw;
+    }
+    
 }
